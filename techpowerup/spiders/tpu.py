@@ -51,7 +51,7 @@ class TpuSpider(scrapy.Spider):
                     HW = dict(zip(columns, values))
                     total.append(HW)
                 for HW_dict in total:
-                    yield HW_dict
+                    yield HW_dict, response
     
     def handle_spider_closed(self, reason):
         self.crawler.stats.set_value('failed_urls', ', '.join(self.failed_urls))
