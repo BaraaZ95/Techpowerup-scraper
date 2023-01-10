@@ -12,7 +12,8 @@ import csv
 gpu_columns =['Product_Name','GPU_Chip', 'Released','Bus', 'Memory', 'GPU_clock', 'Memory_clock','Shaders_TMUs_ROPs']
             
 cpu_columns = ['Name', 'Codename', 'Cores', 'Clock', 'Socket', 'Process', 'L3 Cache', 'TDP', 'Released']
-                    
+
+#The Item pipeline stores two separate csvs, one for the cpus and another for the gpus based on the url of the response
 class TechpowerupPipeline:
 
     def __init__(self):
