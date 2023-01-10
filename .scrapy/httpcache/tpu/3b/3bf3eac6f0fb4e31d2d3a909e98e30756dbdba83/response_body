@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>TechPowerUp</title>
+        <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body>
+        <h1>HTTP 429 - Too Many Requests</h1>
+
+        <p>You are refreshing our pages too quickly, please slow down a bit or solve the captcha below.</p>
+
+        <form action="/ratelimit/" method="POST">
+            <input type="hidden" name="returnto" value="/cpu-specs/?released=2016&amp;nCores=6&amp;sort=name" />
+            <div class="g-recaptcha" data-sitekey="6Ld917cUAAAAAKqgP4paIr2yAPN8TUUsYOctQxfg" data-callback="reCaptchaVerify"></div>
+        </form>
+    </body>
+    <script>
+    function reCaptchaVerify(response) {
+        if (response === document.querySelector('.g-recaptcha-response').value) {
+            document.forms[0].submit();
+        }
+    }
+    </script>
+</html>

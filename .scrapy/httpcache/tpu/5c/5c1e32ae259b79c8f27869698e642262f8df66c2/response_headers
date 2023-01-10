@@ -1,0 +1,9 @@
+Server: openresty
+Date: Mon, 09 Jan 2023 19:12:56 GMT
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+X-Powered-By: PHP/7.4.27
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Encoding: gzip

@@ -1,0 +1,8 @@
+Server: openresty
+Date: Mon, 09 Jan 2023 16:06:41 GMT
+Content-Type: text/html; charset=UTF-8
+X-Powered-By: PHP/7.4.27
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Set-Cookie: botcheck=ce55ccf0bed8f4d70024e83508ea6857; expires=Mon, 09-Jan-2023 22:06:41 GMT; Max-Age=21600; path=/; secure
+Location: /cpu-specs/?released=2014&n8=6&sort=name
