@@ -37,11 +37,13 @@ class TpuSpider(scrapy.Spider):
             if table: #Check if a table exists
                 total = []
                 if "gpu" in response.url:
-                    columns =['Product_Name','GPU_Chip', 'Released','Bus', 'Memory', 'GPU_clock', 'Memory_clock','Shaders_TMUs_ROPs']
+                    columns =['Product_Name','GPU_Chip', 'Released','Bus', 'Memory', 'GPU_clock', 'Memory_clock','Shaders_TMUs_ROPs'] #can add Manufacturer
                     HW['Type'] = 'GPU'
+                    #HW['Manufacturer'] = response.css('div[id="list"] > table >thead>tr>th::text').get()
                 elif "cpu" in response.url:
-                    columns = ['Name', 'Codename', 'Cores', 'Clock', 'Socket', 'Process', 'L3 Cache', 'TDP', 'Released']
+                    columns = ['Name', 'Codename', 'Cores', 'Clock', 'Socket', 'Process', 'L3 Cache', 'TDP', 'Released'] #can add Manufacturer
                     HW['Type'] = 'CPU'
+                     #HW['Manufacturer'] = response.css('div[id="list"] > table >thead>tr>th::text').get()
                 rows = response.css('div[id="list"] > table > tr')
                 for row in rows:
                     values = []
